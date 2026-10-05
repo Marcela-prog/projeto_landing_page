@@ -1,149 +1,382 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bloom Care - Sua Beleza em boas mãos</title>
-    <link rel="stylesheet" href="main.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Bloom Care: maquiagem e cuidados para realçar sua beleza."
+    />
+    <title>Bloom Care | Sua beleza em boas mãos</title>
 
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Fira+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
 
-<body>
-    <header>
-        <div class="container">
-            <h1>Bloom Care</h1>
-            <nav>
-                <a href="#sobre">Sobre</a>
-                <a href="#produtos">Produtos</a>
-                <a href="#pedidos">Pedidos</a>
-                <a href="#contato">Fale Conosco</a>
-            </nav>
+    <!-- Bootstrap e ícones -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Seu CSS sempre por último, pra sobrescrever o Bootstrap -->
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <!-- ========== CABEÇALHO ========== -->
+    <header class="header">
+      <nav class="navbar navbar-expand-md container">
+        <a class="logo" href="#inicio">Bloom <em>Care</em></a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#menu"
+          aria-controls="menu"
+          aria-expanded="false"
+          aria-label="Abrir menu"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="menu">
+          <ul class="navbar-nav gap-md-4">
+            <li class="nav-item">
+              <a class="nav-link" href="#sobre">Sobre</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#produtos">Produtos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#pedidos">Pedidos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contato">Fale conosco</a>
+            </li>
+          </ul>
         </div>
+      </nav>
     </header>
 
     <main>
-        <section id="sobre" class="section">
-            <div class="container">
-                <img src="https://s.tmimgcdn.com/scr/800x500/306700/bela-moda-beleza-logotipo-letra-b_306772-original.jpg" alt="Logo" style="height: 300px; object-fit: contain; border: 5px solid #ccc; box-shadow: 0 8px 16px rgba(247, 162, 219, 0.2); border-radius: 10px;">
-                <h2 style="margin-top: 30px;">Sobre a Nossa Loja</h2>
-                <p>Na Bloom Care, acreditamos que a beleza é um reflexo do cuidado que você dedica a si mesma. Por isso, oferecemos produtos de alta qualidade, feitos com ingredientes selecionados para realçar o melhor de você.
+      <!-- ========== HERO ========== -->
+      <section class="hero" id="inicio">
+        <div class="container hero-content">
+          <p class="eyebrow">maquiagem e autocuidado</p>
+          <h1>Sua beleza <em>em boas mãos</em></h1>
+          <p class="hero-text">
+            Produtos escolhidos com carinho para realçar o melhor de você, todos
+            os dias.
+          </p>
+          <div class="d-flex flex-wrap gap-3 justify-content-center">
+            <a href="#produtos" class="btn-bloom">Ver produtos</a>
+            <a href="#contato" class="btn-bloom btn-bloom--outline"
+              >Fale conosco</a
+            >
+          </div>
+        </div>
+      </section>
 
-                    Nosso compromisso é proporcionar uma experiência única de bem-estar, com produtos que cuidam da sua pele e da sua autoestima. A Bloom Care é mais do que uma loja, é um convite para você se sentir confiante e radiante todos os dias.</p>
+      <!-- ========== SOBRE ========== -->
+      <section class="section" id="sobre">
+        <div class="container">
+          <div class="row align-items-center g-5">
+            <div class="col-md-5 text-center">
+              <img class="img-fluid" alt="Sobre a Bloom Care"
+                src="https://private-us-east-1.manuscdn.com/sessionFile/FDzFwBiTNeUAD9fQMbvLPK/sandbox/JrfSwDvQFITYYHY5fBCh80_1791242593245_na1fn_L2hvbWUvdWJ1bnR1L2Jsb29tLWNhcmUvYXNzZXRzL2Fib3V0LWJsb29t.png?x-oss-process=image/resize,w_4096,h_4096/format,webp/quality,q_80&Expires=1793491200&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvRkR6RndCaVROZVVBRDlmUU1idkxQSy9zYW5kYm94L0pyZlN3RHZRRklUWVlIWTVmQkNoODBfMTc5MTI0MjU5MzI0NV9uYTFmbl9MMmh2YldVdmRXSjFiblIxTDJKc2IyOXRMV05oY21VdllYTnpaWFJ6TDJGaWIzVjBMV0pzYjI5dC5wbmc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd180MDk2LGhfNDA5Ni9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTM0OTEyMDB9fX1dfQ__&Key-Pair-Id=K2QY5QTL8JSY6C&Signature=MEUCIFOM4DcgRY4lC58JcqVk3w3dKtmr712PAZbQAQ0QqqKUAiEA9qzANR6aqDlzdy8lwWWbyn9vNnVBn1FAxpGSJN3q7WE_" />
+            </div>
+            <div class="col-md-7">
+              <p class="eyebrow">sobre nós</p>
+              <h2>Beleza é cuidado</h2>
+              <p>
+                Na Bloom Care, acreditamos que a beleza é um reflexo do cuidado
+                que você dedica a si mesma. Por isso, oferecemos produtos de
+                alta qualidade, com ingredientes selecionados para realçar o
+                melhor de você.
+              </p>
+              <p>
+                Mais do que uma loja, somos um convite para você se sentir
+                confiante e radiante todos os dias.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <section id="produtos" class="section">
-            <div class="container">
-                <h2>Produtos</h2>
-                <div id="carouselProdutos" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <img class="d-block w-100" src="https://res.cloudinary.com/beleza-na-web/image/upload/w_297,c_lpad,w_600,h_315/g_south_west,l_label-free-shipping,x_10,y_-60,o_0/v1/imagens/product/B56257/fc735e98-4048-40b6-a8b8-e1af455b8893-bot-56257-intense-chocolatudo-gloss-rosa-frontal-01.jpg" alt="Gloss Rosa">
-                                    <h5 class="text-colored fw-bold mt-2">Gloss Rosa</h5>
-                                    <p>R$ 39,90</p>
-                                </div>
-                                <div class="col-md-3">
-                                    <img class="d-block w-100" src="https://res.cloudinary.com/beleza-na-web/image/upload/w_297,c_lpad,w_600,h_315/g_south_west,l_label-free-shipping,x_10,y_-60,o_0/v1/imagens/product/B56259/a943ef07-ffab-47b6-8197-369d98ba16b0-bot-56259-intense-chocolatudo-gloss-marrom-frontal-01.jpg" alt="Gloss Chocolate">
-                                    <h5 class="text-colored fw-bold mt-2">Gloss Chocolate</h5>
-                                    <p>R$ 42,90</p>
-                                </div>
-                                <div class="col-md-3">
-                                    <img class="d-block w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWph3tqDUlnAnpKSFyIhHCCeX7BY3BY4g8BQ&s" alt="Hidratante Labial">
-                                    <h5 class="text-colored fw-bold mt-2">Hidratante Labial</h5>
-                                    <p>R$ 28,50</p>
-                                </div>
-                                <div class="col-md-3">
-                                    <img class="d-block w-100" src="https://res.cloudinary.com/beleza-na-web/image/upload/w_1500,f_auto,fl_progressive,q_auto:eco,w_800/v1/imagens/product/B58132/acb03d4f-5544-4815-bfa9-9061695a98d7-bot-58132-cuide-se-bem-de-leite-chocolatudo-body-splash-frontal-01.jpg" alt="Body Splash">
-                                    <h5 class="text-colored fw-bold mt-2">Body Splash</h5>
-                                    <p>R$ 59,90</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <img class="d-block w-100" src="https://res.cloudinary.com/beleza-na-web/image/upload/w_297,c_lpad,w_600,h_315/g_south_west,l_label-free-shipping,x_10,y_-60,o_0/v1/imagens/product/B56259/a943ef07-ffab-47b6-8197-369d98ba16b0-bot-56259-intense-chocolatudo-gloss-marrom-frontal-01.jpg" alt="Hidratante Corporal">
-                                    <p>R$49,90</p>
-                                </div>
-                                <div class="col-md-3">
-                                    <img class="d-block w-100" src="https://acdn.mitiendanube.com/stores/004/847/307/products/img_0774-4ac4e0ab821461c97217332623012258-480-0.webp" alt="Hidratante Corporal">
-                                    <h5 class="text-colored fw-bold mt-2">Hidratante Corporal</h5>
-                                    <p>R$ 54,90</p>
-                                </div>
-                                <div class="col-md-3">
-                                    <img class="d-block w-100" src="https://res.cloudinary.com/beleza-na-web/image/upload/w_297,f_auto,fl_progressive,q_auto:best/v1/imagens/product/B58304/a4369f9a-ab44-47c4-9642-d3cb2fbb4fe4-bot-58304-intense-chocolatudo-paleta-multifuncional-frontal-02.jpg" alt="Paleta de Sombra">
-                                    <h5 class="text-colored fw-bold mt-2">Paleta de Sombra</h5>
-                                    <p>R$ 65,90</p>
-                                </div>
-                                <div class="col-md-3">
-                                    <img class="d-block w-100" src="https://www.tudodemaquiagem.com.br/wp-content/uploads/2024/02/serum-facial-coco-melu.png" alt="Sérum">
-                                    <h5 class="text-colored fw-bold mt-2">Sérum</h5>
-                                    <p>R$ 29,90</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+      <!-- ========== PRODUTOS ========== -->
+      <section class="section section--tinted" id="produtos">
+        <div class="container">
+          <div class="text-center mb-5">
+            <p class="eyebrow">nossa seleção</p>
+            <h2>Produtos favoritos</h2>
+          </div>
 
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselProdutos" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Anterior</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselProdutos" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Próximo</span>
-                    </button>
-                    
+          <div
+            id="carouselProdutos"
+            class="carousel slide"
+            data-bs-ride="carousel"
+            data-bs-interval="6000"
+          >
+            <div class="carousel-inner">
+              <!-- Slide 1 -->
+              <div class="carousel-item active">
+                <div class="row g-4">
+                  <div class="col-6 col-md-3">
+                    <article class="product">
+                      <img
+                        src="https://private-us-east-1.manuscdn.com/sessionFile/FDzFwBiTNeUAD9fQMbvLPK/sandbox/8Zd9JsttMkiPzCkcG5oDAp_1791241977732_na1fn_L2hvbWUvdWJ1bnR1L2Jsb29tLWNhcmUvYXNzZXRzL2dsb3Nz.png?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvRkR6RndCaVROZVVBRDlmUU1idkxQSy9zYW5kYm94LzhaZDlKc3R0TWtpUHpDa2NHNW9EQXBfMTc5MTI0MTk3NzczMl9uYTFmbl9MMmh2YldVdmRXSjFiblIxTDJKc2IyOXRMV05oY21VdllYTnpaWFJ6TDJkc2IzTnoucG5nIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzkzNDkxMjAwfX19XX0_&Key-Pair-Id=K2QY5QTL8JSY6C&Signature=MEUCIG2ctCNmhd3CsvkJ8LTWPZKBgfsd-DSxa4IlAM~llA8mAiEAilepO1v5g9pzk0kObCspuHl4PzxtM3dZ7iFq9nukrvw_"                      />
+                      <h3>Gloss Rosa</h3>
+                      <p class="price">R$ 39,90</p>
+                      <button class="btn-pedir" data-produto="Gloss Rosa">
+                        Quero esse
+                      </button>
+                    </article>
+                  </div>
+                  <div class="col-6 col-md-3">
+                    <article class="product">
+                      <img
+                        src="https://private-us-east-1.manuscdn.com/sessionFile/FDzFwBiTNeUAD9fQMbvLPK/sandbox/8Zd9JsttMkiPzCkcG5oDAp_1791241979063_na1fn_L2hvbWUvdWJ1bnR1L2Jsb29tLWNhcmUvYXNzZXRzL2ZhY2UtY3JlYW0.png?x-oss-process=image/resize,w_4096,h_4096/format,webp/quality,q_80&Expires=1793491200&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvRkR6RndCaVROZVVBRDlmUU1idkxQSy9zYW5kYm94LzhaZDlKc3R0TWtpUHpDa2NHNW9EQXBfMTc5MTI0MTk3OTA2M19uYTFmbl9MMmh2YldVdmRXSjFiblIxTDJKc2IyOXRMV05oY21VdllYTnpaWFJ6TDJaaFkyVXRZM0psWVcwLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzQwOTYsaF80MDk2L2Zvcm1hdCx3ZWJwL3F1YWxpdHkscV84MCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5MzQ5MTIwMH19fV19&Key-Pair-Id=K2QY5QTL8JSY6C&Signature=MEQCIGFvpc15Yvm19OoX4NSA3NpEYeahXCPGWgsnDCTjszVmAiB7jnxfsMfeBODcxMlNSqW7kpLpwvmfqVPKiYq6ZrHJJw__"
+                      />
+                      <h3>Creme Facial</h3>
+                      <p class="price">R$ 42,90</p>
+                      <button class="btn-pedir" data-produto="Creme Facial">
+                        Quero esse
+                      </button>
+                    </article>
+                  </div>
+                  <div class="col-6 col-md-3">
+                    <article class="product">
+                      <img
+                        src="https://private-us-east-1.manuscdn.com/sessionFile/FDzFwBiTNeUAD9fQMbvLPK/sandbox/8Zd9JsttMkiPzCkcG5oDAp_1791241979065_na1fn_L2hvbWUvdWJ1bnR1L2Jsb29tLWNhcmUvYXNzZXRzL2xpcC1iYWxt.png?x-oss-process=image/resize,w_4096,h_4096/format,webp/quality,q_80&Expires=1793491200&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvRkR6RndCaVROZVVBRDlmUU1idkxQSy9zYW5kYm94LzhaZDlKc3R0TWtpUHpDa2NHNW9EQXBfMTc5MTI0MTk3OTA2NV9uYTFmbl9MMmh2YldVdmRXSjFiblIxTDJKc2IyOXRMV05oY21VdllYTnpaWFJ6TDJ4cGNDMWlZV3h0LnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzQwOTYsaF80MDk2L2Zvcm1hdCx3ZWJwL3F1YWxpdHkscV84MCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5MzQ5MTIwMH19fV19&Key-Pair-Id=K2QY5QTL8JSY6C&Signature=MEYCIQDVmEXFOi0nNOM5AI49E-6sBjaWAeIG70sXSsCwvO20BAIhAOdiEgWs1hmxxHvIsGxfgFXT7dKKM07~W-LdeM0922V3"
+                      />
+                      <h3>Hidratante Labial</h3>
+                      <p class="price">R$ 28,50</p>
+                      <button
+                        class="btn-pedir"
+                        data-produto="Hidratante Labial"
+                      >
+                        Quero esse
+                      </button>
+                    </article>
+                  </div>
+                  <div class="col-6 col-md-3">
+                    <article class="product">
+                      <img
+                        src="https://private-us-east-1.manuscdn.com/sessionFile/FDzFwBiTNeUAD9fQMbvLPK/sandbox/8Zd9JsttMkiPzCkcG5oDAp_1791241979060_na1fn_L2hvbWUvdWJ1bnR1L2Jsb29tLWNhcmUvYXNzZXRzL2JvZHktbWlzdA.png?x-oss-process=image/resize,w_4096,h_4096/format,webp/quality,q_80&Expires=1793491200&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvRkR6RndCaVROZVVBRDlmUU1idkxQSy9zYW5kYm94LzhaZDlKc3R0TWtpUHpDa2NHNW9EQXBfMTc5MTI0MTk3OTA2MF9uYTFmbl9MMmh2YldVdmRXSjFiblIxTDJKc2IyOXRMV05oY21VdllYTnpaWFJ6TDJKdlpIa3RiV2x6ZEEucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHdfNDA5NixoXzQwOTYvZm9ybWF0LHdlYnAvcXVhbGl0eSxxXzgwIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzkzNDkxMjAwfX19XX0_&Key-Pair-Id=K2QY5QTL8JSY6C&Signature=MEUCIAs058fSZFt6ITvIK0Y1jzJ9J77z95xLLHgGTv~HaSPKAiEAs8jnh1P~IuF8qPaoEux972brlwPZ-QKQ3upeEpgWbg0_"                      />
+                      <h3>Body Splash</h3>
+                      <p class="price">R$ 59,90</p>
+                      <button class="btn-pedir" data-produto="Body Splash">
+                        Quero esse
+                      </button>
+                    </article>
+                  </div>
                 </div>
-            </div>
-        </section>
+              </div>
 
-        <section id="pedidos" class="section">
-            <div class="container">
-                <h2>Pedidos</h2>
-                <p>Entre em contato conosco para fazer seu pedido personalizado ou conhecer mais sobre nossos produtos!</p>
-                <button class="btn btn-primary" id="fazerPedido">Faça seu pedido aqui</button> 
-            </div>
-        </section>
-
-        <section id="contato" class="section">
-            <div class="container">
-                <h2>Fale Conosco</h2>
-                <form>
-                    <label for="name">Nome</label>
-                    <input type="text" id="nome" name="nome" required>
-
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-
-                    <label for="mensagem">Mensagem</label>
-                    <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
-
-                    <button type="submit">Enviar</button>
-                </form>
-
-                <div class="redes-sociais">
-                    <h3>Nos siga nas nossas redes sociais</h3>
-                    <ul class="lista-redes-sociais">
-                        <li><a href="https://www.facebook.com" target="_blank">
-                            <i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="https://www.instagram.com" target="_blank">
-                            <i class="fab fa-instagram"></i></a></li>
-                        <li><a href="https://www.tiktok.com" target="_blank">
-                            <i class="fab fa-tiktok"></i></a></li>
-                        <li><a href="https://www.whatsapp.com" target="_blank">
-                            <i class="fab fa-whatsapp"></i></a></li>
-                    </ul>
+              <!-- Slide 2 -->
+              <div class="carousel-item">
+                <div class="row g-4 justify-content-center">
+                  <div class="col-6 col-md-3">
+                    <article class="product">
+                      <img
+                        src="https://private-us-east-1.manuscdn.com/sessionFile/FDzFwBiTNeUAD9fQMbvLPK/sandbox/8Zd9JsttMkiPzCkcG5oDAp_1791241977820_na1fn_L2hvbWUvdWJ1bnR1L2Jsb29tLWNhcmUvYXNzZXRzL2JvZHktbG90aW9u.png?x-oss-process=image/resize,w_4096,h_4096/format,webp/quality,q_80&Expires=1793491200&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvRkR6RndCaVROZVVBRDlmUU1idkxQSy9zYW5kYm94LzhaZDlKc3R0TWtpUHpDa2NHNW9EQXBfMTc5MTI0MTk3NzgyMF9uYTFmbl9MMmh2YldVdmRXSjFiblIxTDJKc2IyOXRMV05oY21VdllYTnpaWFJ6TDJKdlpIa3RiRzkwYVc5dS5wbmc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd180MDk2LGhfNDA5Ni9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTM0OTEyMDB9fX1dfQ__&Key-Pair-Id=K2QY5QTL8JSY6C&Signature=MEUCIDQHy9C8IdXhMqBq8Yab2hyK56OqscH7mJKrmbeJvyzGAiEAm3e2tcXyHUeso62IxGN1V1yeOMUWCW7DROFjghM1vxI_"
+                      />
+                      <h3>Hidratante Corporal</h3>
+                      <p class="price">R$ 54,90</p>
+                      <button
+                        class="btn-pedir"
+                        data-produto="Hidratante Corporal"
+                      >
+                        Quero esse
+                      </button>
+                    </article>
+                  </div>
+                  <div class="col-6 col-md-3">
+                    <article class="product">
+                      <img
+                        src="https://private-us-east-1.manuscdn.com/sessionFile/FDzFwBiTNeUAD9fQMbvLPK/sandbox/8Zd9JsttMkiPzCkcG5oDAp_1791241978179_na1fn_L2hvbWUvdWJ1bnR1L2Jsb29tLWNhcmUvYXNzZXRzL2V5ZXNoYWRvdy1wYWxldHRl.png?x-oss-process=image/resize,w_4096,h_4096/format,webp/quality,q_80&Expires=1793491200&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvRkR6RndCaVROZVVBRDlmUU1idkxQSy9zYW5kYm94LzhaZDlKc3R0TWtpUHpDa2NHNW9EQXBfMTc5MTI0MTk3ODE3OV9uYTFmbl9MMmh2YldVdmRXSjFiblIxTDJKc2IyOXRMV05oY21VdllYTnpaWFJ6TDJWNVpYTm9ZV1J2ZHkxd1lXeGxkSFJsLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzQwOTYsaF80MDk2L2Zvcm1hdCx3ZWJwL3F1YWxpdHkscV84MCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5MzQ5MTIwMH19fV19&Key-Pair-Id=K2QY5QTL8JSY6C&Signature=MEYCIQDPxWdc0OnMX1FPulN3nsneF6eH2vJ0CJL5J19jtrc3XgIhAJ16TYs-zD8tkNAdZ4fsWx9eM5EO0p-bkdFMYzAROT~s"
+                      />
+                      <h3>Paleta de Sombra</h3>
+                      <p class="price">R$ 65,90</p>
+                      <button class="btn-pedir" data-produto="Paleta de Sombra">
+                        Quero esse
+                      </button>
+                    </article>
+                  </div>
+                  <div class="col-6 col-md-3">
+                    <article class="product">
+                      <img
+                        src="https://private-us-east-1.manuscdn.com/sessionFile/FDzFwBiTNeUAD9fQMbvLPK/sandbox/8Zd9JsttMkiPzCkcG5oDAp_1791241977802_na1fn_L2hvbWUvdWJ1bnR1L2Jsb29tLWNhcmUvYXNzZXRzL3NlcnVt.png?x-oss-process=image/resize,w_4096,h_4096/format,webp/quality,q_80&Expires=1793491200&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvRkR6RndCaVROZVVBRDlmUU1idkxQSy9zYW5kYm94LzhaZDlKc3R0TWtpUHpDa2NHNW9EQXBfMTc5MTI0MTk3NzgwMl9uYTFmbl9MMmh2YldVdmRXSjFiblIxTDJKc2IyOXRMV05oY21VdllYTnpaWFJ6TDNObGNuVnQucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHdfNDA5NixoXzQwOTYvZm9ybWF0LHdlYnAvcXVhbGl0eSxxXzgwIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzkzNDkxMjAwfX19XX0_&Key-Pair-Id=K2QY5QTL8JSY6C&Signature=MEQCHy2xplawZSoIoobWyu6OJ72TOwZthavPpMZy3OaQL3wCIQCYQw~0tD5G9GdlisWXzs3dYV-55LwfLJmWZxoiXr4~bA__"
+                      />
+                      <h3>Sérum Facial</h3>
+                      <p class="price">R$ 29,90</p>
+                      <button class="btn-pedir" data-produto="Sérum Facial">
+                        Quero esse
+                      </button>
+                    </article>
+                  </div>
                 </div>
+              </div>
             </div>
-        </section>
+
+            <!-- Bolinhas -->
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#carouselProdutos"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselProdutos"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+              ></button>
+            </div>
+
+            <!-- Setas -->
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselProdutos"
+              data-bs-slide="prev"
+            >
+              <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselProdutos"
+              data-bs-slide="next"
+            >
+              <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+              <span class="visually-hidden">Próximo</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== PEDIDOS ========== -->
+      <section class="section" id="pedidos">
+        <div class="container">
+          <div class="pedido-box">
+            <p class="eyebrow">pedido personalizado</p>
+            <h2>Monte seu kit Bloom</h2>
+            <p>
+              Escolha seus favoritos e fale com a gente para montar um pedido do
+              seu jeito.
+            </p>
+            <a href="#contato" class="btn-bloom" id="fazerPedido"
+              >Faça seu pedido aqui</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== CONTATO ========== -->
+      <section class="section section--tinted" id="contato">
+        <div class="container">
+          <div class="text-center mb-4">
+            <p class="eyebrow">fale conosco</p>
+            <h2>Vamos conversar?</h2>
+          </div>
+
+          <form class="contact-form" id="formContato">
+            <label for="nome">Nome</label>
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              placeholder="Seu nome"
+              required
+            />
+
+            <label for="email">E-mail</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="seuemail@exemplo.com"
+              required
+            />
+
+            <label for="mensagem">Mensagem</label>
+            <textarea
+              id="mensagem"
+              name="mensagem"
+              rows="5"
+              placeholder="Conte o que você procura"
+              required
+            ></textarea>
+
+            <button type="submit" class="btn-bloom">Enviar mensagem</button>
+            <p class="form-feedback" id="feedback" role="status"></p>
+          </form>
+
+          <div class="redes-sociais">
+            <h3>Siga a Bloom Care</h3>
+            <ul class="lista-redes-sociais">
+              <li>
+                <a
+                  href="https://www.facebook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Facebook"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.tiktok.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="TikTok"
+                  ><i class="fab fa-tiktok"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.whatsapp.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="WhatsApp"
+                  ><i class="fab fa-whatsapp"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <footer>
-        <p>&copy; Mn - 2025 Bloom Care. Todos os direitos reservados.</p>
+    <!-- ========== RODAPÉ ========== -->
+    <footer class="footer">
+      <p>&copy; 2026 Bloom Care. Todos os direitos reservados.</p>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
